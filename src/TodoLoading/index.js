@@ -3,9 +3,9 @@ import "./TodoLoading.css";
 function TodoLoading({ error }) {
   return (
     <div className="LoadingTodo-container">
-      <span className="LoadingTodo-completeIcon"></span>
+      <span className="IconLoading LoadingTodo-completeIcon">✓</span>
       <p className="LoadingTodo-text">Cargando...</p>
-      <span className="LoadingTodo-deleteIcon"></span>
+      <span className="IconLoading LoadingTodo-deleteIcon">X</span>
     </div>
   );
 }

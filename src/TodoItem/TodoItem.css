@@ -30,9 +30,9 @@
   font-weight: bold;
 }
 
-.Icon img {
+/* .Icon img {
   width: 20px;
-}
+} */
 .Icon-check {
   position: absolute;
   left: 12px;
@@ -44,7 +44,7 @@
 .Icon-delete {
   position: absolute;
   top: 12px;
-  right: 0;
+  right: 15px;
 }
 .Icon-delete:hover {
   color: red;

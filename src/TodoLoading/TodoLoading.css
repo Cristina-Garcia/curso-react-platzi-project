@@ -32,11 +32,15 @@
   font-weight: 400;
 }
 
-.LoadingTodo-completeIcon,
-.LoadingTodo-deleteIcon {
-  border-radius: 50px;
+.IconLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 48px;
   width: 48px;
+  font-size: 24px;
+  font-weight: bold;
+  color: gray;
 }
 
 .LoadingTodo-completeIcon {
@@ -47,5 +51,5 @@
 .LoadingTodo-deleteIcon {
   position: absolute;
   top: 12px;
-  right: 0;
+  right: 15px;
 }
