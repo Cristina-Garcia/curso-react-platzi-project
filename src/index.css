@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  background-image: url("https://img.freepik.com/vector-gratis/ilustracion-concepto-tablero-scrum_114360-1591.jpg?w=1060&t=st=1676402417~exp=1676403017~hmac=c3abbaf48c729f6e8d8b1dc24e9107696348b0846dead074716ced14fcd57441");
+  font-family: "Roboto Mono", monospace;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+} */
