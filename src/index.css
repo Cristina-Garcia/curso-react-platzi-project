@@ -1,7 +1,8 @@
 body {
   box-sizing: border-box;
   margin: 0;
-  background-image: url("https://img.freepik.com/vector-gratis/ilustracion-concepto-tablero-scrum_114360-1591.jpg?w=1060&t=st=1676402417~exp=1676403017~hmac=c3abbaf48c729f6e8d8b1dc24e9107696348b0846dead074716ced14fcd57441");
+  /* background-image: url("https://img.freepik.com/vector-gratis/ilustracion-concepto-tablero-scrum_114360-1591.jpg?w=1060&t=st=1676402417~exp=1676403017~hmac=c3abbaf48c729f6e8d8b1dc24e9107696348b0846dead074716ced14fcd57441"); */
+  background-color: #a4ac9d;
   font-family: "Roboto Mono", monospace;
   background-repeat: no-repeat;
   background-size: cover;

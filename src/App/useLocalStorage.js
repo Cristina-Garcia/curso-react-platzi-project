@@ -2,6 +2,7 @@ import React from "react";
 
 //Recibimos como parametros el nombre y el estado inicial de nuestro item
 function useLocalStorage(itemName, initialValue) {
+  const [sincronizedItem, setSincronizedItem] = React.useState(true);
   const [error, setError] = React.useState(false);
   const [loading, setLoading] = React.useState(true);
   //Nuevo Hook
@@ -29,7 +30,7 @@ function useLocalStorage(itemName, initialValue) {
         setLoading(false);
       }
     }, 1000);
-  });
+  }, [sincronizedItem]);
 
   //funcion puente entre localStorage inicial y la actualizacion(complete y delete)
   const saveItem = (newItem) => {
@@ -40,12 +41,18 @@ function useLocalStorage(itemName, initialValue) {
       localStorage.setItem(itemName, stringifiedItem);
       //Actualizamos nuestro estado
       setItem(newItem);
+      setLoading(false);
+      setSincronizedItem(true);
     } catch (error) {
       setError(error);
     }
   };
   //Regresamos los datos que necesitamos
-  return { item, saveItem, loading, error };
+  const sincronizeItem = () => {
+    setLoading(true);
+    setSincronizedItem(false);
+  };
+  return { item, saveItem, loading, error, sincronizeItem };
 }
 
 export { useLocalStorage };

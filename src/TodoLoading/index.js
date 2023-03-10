@@ -1,11 +1,12 @@
 import React from "react";
 import "./TodoLoading.css";
-function TodoLoading({ error }) {
+
+function TodoLoading() {
   return (
     <div className="LoadingTodo-container">
-      <span className="IconLoading LoadingTodo-completeIcon">✓</span>
+      <span className="IconLoading LoadingTodo-completeIcon"></span>
       <p className="LoadingTodo-text">Cargando...</p>
-      <span className="IconLoading LoadingTodo-deleteIcon">X</span>
+      <span className="IconLoading LoadingTodo-deleteIcon"></span>
     </div>
   );
 }

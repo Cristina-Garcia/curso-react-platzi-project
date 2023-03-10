@@ -1,12 +1,12 @@
 import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
-const TodoContext = React.createContext();
 
-function TodoProvider(props) {
+function useTodos() {
   // Desestructuramos los datos que retornamos de nuestro custom hook, y le pasamos los argumentos que necesitamos (nombre y estado inicial)
   const {
     item: todos,
     saveItem: saveTodos,
+    sincronizeItem: sincronizeTodos,
     loading,
     error,
   } = useLocalStorage("TODOS_V1", []);
@@ -45,7 +45,7 @@ function TodoProvider(props) {
     const todoIndex = todos.findIndex((todo) => todo.text === text);
     const newTodos = [...todos];
     newTodos[todoIndex].completed = true;
-    //Ahora cada que el usuario interactue con nuestra aplicaion se guardaran los TODOs con nuestra nueva funcion
+    //Ahora cada que el usuario interactue con nuestra aplicacion se guardaran los TODOs con nuestra nueva funcion
     saveTodos(newTodos);
   };
   const deleteTodo = (text) => {
@@ -55,26 +55,21 @@ function TodoProvider(props) {
     //Ahora cada que el usuario interactue con nuestra aplicaion se guardaran los TODOs con nuestra nueva funcion
     saveTodos(newTodos);
   };
-  return (
-    <TodoContext.Provider
-      value={{
-        error,
-        loading,
-        totalTodos,
-        completedTodos,
-        searchValue,
-        setSearchValue,
-        searchedTodos,
-        completeTodo,
-        addTodo,
-        deleteTodo,
-        openModal,
-        setOpenModal,
-      }}
-    >
-      {props.children}
-    </TodoContext.Provider>
-  );
+  return {
+    error,
+    loading,
+    totalTodos,
+    completedTodos,
+    searchValue,
+    setSearchValue,
+    searchedTodos,
+    completeTodo,
+    addTodo,
+    deleteTodo,
+    openModal,
+    setOpenModal,
+    sincronizeTodos,
+  };
 }
 
-export { TodoContext, TodoProvider };
+export { useTodos };

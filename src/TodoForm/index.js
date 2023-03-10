@@ -1,12 +1,10 @@
 import React from "react";
-import { TodoContext } from "../TodoContext";
+
 import "./TodoForm.css";
 
-function TodoForm() {
+function TodoForm({ addTodo, setOpenModal }) {
   //Nuevo estado local para el nuevo ToDo, por efecto vacio.
   const [newTodoValue, setNewTodoValue] = React.useState("");
-  // Desestructuramos las funciones que necesitamos para añadir un TODO y cerrar nuestro modal
-  const { addTodo, setOpenModal } = React.useContext(TodoContext);
 
   //Se captura el valor (texto) que el usuario introduce
   const onChange = (event) => {
@@ -23,7 +21,7 @@ function TodoForm() {
       // !addTodo(newTodoValue);
     } else {
       addTodo(newTodoValue);
-      setOpenModal(true);
+      setOpenModal(false);
     }
   };
 

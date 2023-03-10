@@ -36,8 +36,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 48px;
-  width: 48px;
+  height: 24px;
+  width: 24px;
   font-size: 24px;
   font-weight: bold;
   color: gray;
@@ -45,11 +45,14 @@
 
 .LoadingTodo-completeIcon {
   position: absolute;
-  left: 12px;
+  left: 20px;
+  background-color: gray;
+  border-radius: 50%;
 }
 
 .LoadingTodo-deleteIcon {
   position: absolute;
-  top: 12px;
-  right: 15px;
+  top: 22px;
+  right: 20px;
+  background-color: gray;
 }

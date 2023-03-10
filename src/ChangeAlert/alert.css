@@ -1,0 +1,22 @@
+.alert-modal {
+  width: 30%;
+  height: 30%;
+  background-color: #900c3f;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+}
+.button-alert {
+  position: absolute;
+  bottom: 20px;
+  left: 150px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #b05473;
+  color: white;
+  cursor: pointer;
+}
+.button-alert:hover {
+  background-color: #ce7095;
+}
